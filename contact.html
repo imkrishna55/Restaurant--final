@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <script>
+        function initMap() {
+            var businessLocation = { lat: 40.7128, lng: -74.0060 };
+    
+            var map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 15,
+                center: businessLocation,
+            });
+        
+            var marker = new google.maps.Marker({
+                position: businessLocation,
+                map: map,
+            });
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="headerbar">
+                <div class="account">
+                  <ul>
+                    <a href="index.html">
+                      <li>
+                        <i class="fa-solid fa-house-chimney"></i>
+                      </li>
+                    </a>
+                    <a href="#">
+                      <li>
+                        <i
+                          class="fa-solid fa-magnifying-glass searchicon"
+                          id="searchicon1"
+                        ></i>
+                      </li>
+                    </a>
+                    <div class="search" id="searchinput1">
+                      <input type="search" />
+                      <i class="fa-solid fa-magnifying-glass srchicon"></i>
+                    </div>
+                    <a href="">
+                      <li>
+                       <a href="login.html"> <i class="fa-solid fa-user" id="user-lab"></i></a>
+                      </li>
+                    </a>
+                  </ul>
+                </div>
+                <div class="nav">
+                  <ul>
+                    <a href="index.html">
+                      <li>Home</li>
+                    </a>
+                      <a href="about.html"> <li>About </li></a>
+                
+                    <a href="menu.html">
+                      <li>Food Menu</li>
+                     </a>  
+                      <a href="bookTable.html">
+                      <li>Book Table</li>
+                    </a>
+                    <a href="contactus.html" class="active">
+                      <li>Contact Us</li>
+                    </a>
+                  </ul>
+                </div>
+              </div>
+              <div class="logo">
+                <a href="index.html"><img src="/images/logo1.png" /></a>
+              </div>
+              <div class="bar">
+                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-xmark" id="hdcross"></i>
+              </div>
+              <div class="nav">
+                <ul>
+                  <a href="index.html" >
+                    <li>Home</li>
+                  </a>
+                  <a href="about.html">
+                    <li>About</li>
+                  </a>
+                  <a href="menu.html">
+                    <li>Food Menu</li>
+                  </a>
+                  <a href="bookTable.html">
+                    <li>Book Table</li>
+                  </a>
+                  <a href="contact.html" class="active"><li>Contact Us</li></a>
+                </ul>
+              </div>
+              <div class="account">
+                <ul> 
+                  </a>
+                  <a href="#">
+                    <li>
+                      <i
+                        class="fa-solid fa-magnifying-glass searchicon"
+                        id="searchicon2"
+                      ></i>
+                    </li>
+                  </a>
+                  <div class="search" id="searchinput2">
+                    <input type="search" />
+                    <i class="fa-solid fa-magnifying-glass searchicon"></i>
+                  </div>
+                  <a href="#">
+                    <li>
+                      <a href="login.html"><i class="fa-solid fa-user" id="user-lab"></i></a>
+                    </li>
+                  </a>
+                </ul>
+              </div>
+        </div>
+    </header>
+
+    
+    <div class="contact-us">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Feel free to reach out to us for any inquiries or feedback!</p>
+            <div class="contact-info">
+                <p>Email: shreekrishnatiwari.xdezo@gmail.com</p>
+                <p>Phone: 980-5897357</p>
+                <p>whatsapp: 984-6856128</p>
+            </div>
+            <div class="contact-form">
+                <h2>Send us a message</h2>
+                <form action="send_message.php" method="post">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                    <br><br><br>
+                    <h1>Map</h1>
+                </form>
+            </div>
+            <div id="map" style="height: 400px; width: 100%;"></div>
+        </div>
+    </div>
+
+    <footer>
+        <section class="footer">
+            <img src="/images/logo1.png" class="logo">
+        
+            <div class="container">
+               
+                <div>
+                 
+                    <ul>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+        
+                    </ul>
+                </div>
+                <div>
+                <h3>Contact Us</h3>
+                <span>980-5897357</span>
+                <br>
+                <span>shreekrishnatiwari.xdezo@gmail.com</span>
+            </div>
+            <br>
+            <br>
+            <p>&copy;2024 Reserved by xdezo technologies</p>
+        </div>
+        </section>
+    </footer>
+</body>
+</html>
